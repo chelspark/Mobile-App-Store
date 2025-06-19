@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    {{#if user}}
+      <div class="useremail-logout">
+        <p>Logged in as: <strong>{{user.email}}</em></strong> | </p>
+        <form action="/logout" method="POST" class="logout-button">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+    {{/if}}
+    
+    {{{body}}}
+  </body>
+</html>

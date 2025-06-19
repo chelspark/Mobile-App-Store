@@ -1,0 +1,27 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="nav">
+    <p class="home"><a href="/">Home</a></p>
+    <p class="create-newApp"><a href="/new">Upload a new app</a></p>
+</div>
+
+<div class="my-app-container">
+    {{#if myApps.length}}
+        {{#each myApps}}
+            <div class="my-app">
+                <p class="my-app-name">{{this.name}}</p>
+                <p class="my-app-description">{{this.description}}</p>
+                <div class="my-app-settings">
+                    <p class="my-app-viewDetails"><a href="/app/{{this._id}}">View Details</a></p>
+                    <form action="/app/delete/{{this._id}}" method="post">
+                        <button class="my-app-delete-button" type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="my-app-nav2-container">
+            <p class="my-app-nav2"><a href="/new">Upload a new app</a></p>
+        </div>
+    {{/if}}
+</div>

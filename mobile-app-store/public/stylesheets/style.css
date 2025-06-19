@@ -1,0 +1,503 @@
+body {
+  padding: 0 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(34, 34, 34);
+}
+
+/* DEFAULT */
+.useremail-logout {
+  display : flex;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+}
+
+.logout-button button{
+  margin-left: 6px;
+  font-size: 12px;
+  color: #ffffff;
+  border-style: none;
+  background-color: #85b8da;
+  border-radius: 6px;
+  padding: 3px 7px;
+  border-bottom: 3px solid #668ea9;
+}
+
+.logout-button button:hover {
+  box-shadow: 0 0 6px 1px #ffffff;
+}
+
+.title {
+  margin: 0;
+  border-radius: 10px;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  padding-left: 15px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgb(133, 133, 133);
+}
+
+.create-newApp a, .myApp a, .home a {
+  color: white;
+}
+
+.login-message {
+  color: #ffffff;
+}
+
+.login-message a {
+  color: #58afe9;
+}
+
+.login-message a:hover {
+  color: #458bbb;
+}
+
+/* Home.hbs */
+.apps-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-top: 30px;
+}
+
+.apps {
+  border-radius: 5px;
+  box-shadow: 0 0 7px #404040;
+  background-color: #565656;
+  /* width: fit-content; */
+  width: 388px;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  position: relative;
+  height: fit-content;
+}
+
+.apps-screenshot {
+  border-radius: 5px;
+}
+
+.apps-name {
+  font-size: 22px;
+  margin: 6px 0 3px 0;
+}
+
+.apps-name a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.apps-description {
+  font-size: 17px;
+  margin: 0 0 10px 0;
+  color: #d3d3d3;
+  width: 75%;
+  padding-left: 5px;
+}
+
+.apps-view-details {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.apps-view-details a {
+  color: #58afe9;
+}
+
+.apps-view-details a:hover {
+  color: #458bbb;
+}
+
+.no-apps-container {
+  width: fit-content;
+  margin: 30px auto auto auto;
+}
+
+.no-apps {
+  color: #ffffff;
+}
+
+/* appDetail.hbs */
+.app-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.app {
+  box-shadow: 0 0 7px #404040;
+  background-color: #565656;
+  border-radius: 5px;
+  padding: 10px 30px;
+  position: relative;
+  width: 1000px;
+  margin: 10px auto 0 auto;
+}
+
+.app-id {
+  font-size: 10px;
+  margin: 0;
+  color: #b5b5b5;
+}
+
+.app-name {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 15px 0 0 0;
+}
+
+.app-description {
+  width: 900px;
+  color: #e4e4e4;
+  margin: 5px 0 0 0;
+  font-size: 18px;
+  padding-left: 7px;
+  padding-bottom: 10px;
+}
+
+.screenshot-gallery {
+  margin: 10px 0 0 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  border-top: 1px solid rgb(133, 133, 133);
+  border-bottom: 1px solid rgb(133, 133, 133);
+}
+
+.app-screenshots {
+  border-radius: 5px;
+}
+
+.app-detail-container {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.app-details {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.app-apk{
+  background-color: #ff903c;
+  position: absolute;
+  top: 31px;
+  right: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0.5px rgb(60, 60, 60);
+}
+
+.app-apk:hover {
+  background-color: #d87b33;
+}
+
+/* myapps.hbs */
+.my-app-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.my-app {
+  border-radius: 5px;
+  background-color: #565656;
+  box-shadow: 0 0 7px #404040;
+  padding: 15px 20px;
+  width: 300px;
+}
+
+.my-app-name {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.my-app-description {
+  color: #d3d3d3;
+  margin: 10px 0 0 0;
+  padding-left: 10px;
+}
+
+.my-app-settings {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.my-app-viewDetails a {
+  color: #58afe9;
+}
+
+.my-app-viewDetails a:hover {
+  color: #458bbb;
+}
+
+.my-app-delete-button {
+  background-color: #818181;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #ffffff;
+  box-shadow: 0 0 7px #404040;
+}
+
+.my-app-delete-button:hover {
+  color: #ff4444;
+  box-shadow: 0 0 7px #3f3636;
+  background-color: #707070;
+}
+
+.my-app-nav2-container {
+  width: fit-content;
+  margin: auto;
+}
+
+.my-app-nav2 {
+  background-color: #818181;
+  border-style: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  box-shadow: 0 0 7px #404040;
+}
+
+.my-app-nav2:hover{
+  box-shadow: 0 0 7px 2px #787878;
+}
+
+.my-app-nav2 a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* newApp.hbs */
+.new-app-form-container {
+  margin: 30px auto 30px auto;
+  width: fit-content;
+  padding: 20px 30px;
+}
+
+.new-app-formName {
+  margin: auto;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.new-app-form {
+  width: 514px;
+}
+
+.new-app-name, .new-app-description, .new-app-details, .new-app-apk, .new-app-screenshots {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 2px;
+}
+
+.new-app-nameInput, .new-app-descriptionInput, .new-app-detailsInput {
+  margin-top: 7px;
+  width: 500px;
+  font-size: 18px;
+  padding: 3px 5px;
+}
+
+.new-app-nameInput:hover, .new-app-descriptionInput:hover, .new-app-detailsInput:hover {
+  border: 2px solid #58afe9;
+}
+
+.new-app-apkSubmit, .new-app-screenshotsSubmit {
+  color: #ff9393;
+  padding-left: 10px;
+}
+
+.new-app-button-container {
+  margin: 10px auto 5px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.new-app-submit-button {
+  background-color: #818181;
+  border-style: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: #ffffff;
+  box-shadow: 0 0 7px #404040;
+  width: 100%;
+}
+
+.new-app-submit-button:hover {
+  font-weight: bold;
+  background-color: #707070;
+  box-shadow: 0 0 5px #7b7b7b;
+}
+
+/* login.hbs */
+.login-nav {
+  margin-top: 15px;
+  border-bottom: 1px solid rgb(133, 133, 133);
+}
+
+.login-form-container, .register-form-container {
+  width: fit-content;
+  margin: 50px auto auto auto;
+}
+
+.login-form-name, .register-form-name {
+  margin: auto;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.login-form, .register-form {
+  width: 264px;
+  padding: 15px 40px;
+}
+
+.login-email, .login-password, .register-email, .register-password {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 2px;
+}
+
+.login-emailInput, .login-passwordInput, .register-emailInput, .register-passwordInput {
+  margin-top: 7px;
+  width: 250px;
+  font-size: 18px;
+  padding: 3px 5px;
+}
+
+.login-emailInput:hover, .login-passwordInput:hover, .register-emailInput:hover, .register-passwordInput:hover {
+  border: 2px solid #58afe9;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.error-msg {
+  color: #ff3f3f;
+  font-size:12px;
+  margin: 0;
+}
+
+.login-nav2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.login-registerNav a {
+  color: #58afe9;
+}
+
+.login-registerNav a:hover {
+  color: #458bbb;
+}
+
+.login-submit-button {
+  background-color: #818181;
+  border-style: none;
+  border-radius: 5px;
+  color: #ffffff;
+  box-shadow: 0 0 7px #404040;
+  width: 60px;
+  height: 30px;
+}
+
+.login-submit-button:hover {
+  box-shadow: 0 0 5px 0.5px #a5a5a5;
+}
+
+.login-fail-container {
+  width: fit-content;
+  margin: 70px auto auto auto;
+}
+
+.login-fail-box {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 25px 30px;
+}
+
+.login-fail-msg {
+  color: #ff8989;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.login-fail-msg2, .login-fail-msg3 {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.login-fail-msg2 a, .login-fail-msg3 a {
+  color: #58afe9;
+}
+
+.login-fail-msg2 a:hover, .login-fail-msg3 a:hover {
+  color: #458bbb;
+}
+
+.login-fail-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* register.hbs */
+.register-submit-button {
+  background-color: #818181;
+  border-style: none;
+  border-radius: 5px;
+  color: #ffffff;
+  box-shadow: 0 0 7px #404040;
+  padding: 6px 0;
+  width: 100%;
+}
+
+.register-submit-button:hover {
+  box-shadow: 0 0 5px 0.5px #a5a5a5;
+}
+
+.register-nav2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.register-error-msg {
+  color: #f78282;
+  font-size: 10px;
+  padding-left: 5px;
+}

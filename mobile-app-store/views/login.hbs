@@ -1,0 +1,32 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="nav">
+    <p class="home"><a href="/">Home</a></p>
+</div>
+
+<fieldset class="login-form-container">
+    <legend class="login-form-name">Login</legend>
+    <form class="login-form" action="/login" method="POST">
+        <div>
+            <label class="login-email" for="userEmail">Email:</label>
+            <br>
+            <input class="login-emailInput" type="email" name="email" required>
+        </div>
+        <br>
+        <div>
+            <label class="login-password" for="password">Password:</label>
+            <br>
+            <input class="login-passwordInput" type="password" name="password" required>
+        </div>
+        <br>
+        <div class="error-container">
+            {{#if error}}
+                <p class="error-msg">{{error}}</p>
+            {{/if}}
+        </div>
+        <div class="login-nav2">
+            <p class="login-registerNav"><a href="/register">Create a new account</a></p>
+            <input class="login-submit-button" type="submit" value="Login">
+        </div>
+    </form>
+</fieldset>

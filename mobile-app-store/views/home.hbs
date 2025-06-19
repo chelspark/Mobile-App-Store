@@ -1,0 +1,31 @@
+<h1 class="title">Welcome to {{title}}</h1>
+
+{{#if user}}
+    <div class="nav">
+        <p class="myApp"><a href="/my">My apps</a></p>
+        <p class="create-newApp"><a href="/new">Upload a new app</a></p>
+    </div>
+{{else}}
+    <div class="nav">
+        <p class="login-message">Please <a href="/login">Log in</a> here</p>
+    </div>
+{{/if}}
+
+{{#if apps.length}}
+    <div class="apps-container">
+        {{#each apps}}
+            <div class="apps">
+                {{#if this.screenshotUrl}}
+                    <img class="apps-screenshot" src="{{this.screenshotUrl}}" alt="No screenshot" width="388px" height="300px">
+                {{/if}}
+                <p class="apps-name"><a href="/app/{{this._id}}">{{this.name}}</a></p>
+                <p class="apps-description">{{this.description}}</p>
+                <p class="apps-view-details"><a href="/app/{{this._id}}">View Details</a></p>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    <div class="no-apps-container">
+        <p class="no-apps">No apps uploaded yet.</p>
+    </div>
+{{/if}}

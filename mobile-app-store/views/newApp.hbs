@@ -1,0 +1,38 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="nav">
+    <p class="home"><a href="/">Home</a></p>
+    <p class="myApp"><a href="/my">My apps</a></p>
+</div>
+
+<fieldset class="new-app-form-container">
+    <legend class="new-app-formName">New App Form</legend>
+    <form class="new-app-form" action="/new" method="POST" enctype="multipart/form-data">
+        <label class="new-app-name" for="name">App Name:</label>
+        <br>
+        <input class="new-app-nameInput" type="text" name="name" required>
+        <br>
+        <br>
+        <label class="new-app-description" for="description">Description:</label>
+        <br>
+        <textarea class="new-app-descriptionInput" name="description" required></textarea>
+        <br>
+        <br>
+        <label class="new-app-details" for="details">Details (optional):</label>
+        <br>
+        <textarea class="new-app-detailsInput" name="details" rows="9"></textarea>
+        <br>
+        <br>
+        <label class="new-app-apk" for="apk">APK file:</label>
+        <input class="new-app-apkSubmit" type="file" name="apk" required>
+        <br>
+        <br>
+        <label class="new-app-screenshots" for="screenshot">Screenshots - 388px x 300px (optional):</label>
+        <input class="new-app-screenshotsSubmit" type="file" name="screenshot" accept="image/*" multiple>
+        <br>
+        <br>
+        <div class="new-app-button-container">
+            <input class="new-app-submit-button" type="submit" value="Upload">
+        </div>
+    </form>
+</fieldset>

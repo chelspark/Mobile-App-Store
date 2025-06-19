@@ -1,0 +1,38 @@
+<h1 class="title">{{title}}</h1>
+
+{{#if user}}
+    <div class="nav">
+        <p class="home"><a href="/">Home</a></p>
+        <p class="myApp"><a href="/my">My apps</a></p>
+        <p class="create-newApp"><a href="/new">Upload a new app</a></p>
+    </div>
+{{else}}
+    <div class="nav">
+        <p class="home"><a href="/">Home</a></p>
+    </div>
+{{/if}}
+
+<div class="app-container">
+    <div class="app">
+        <p class="app-id">id: {{app._id}}</p>
+        <p class="app-name">{{app.name}}</p>
+        <p class="app-description">{{app.description}}</p>
+        {{#if screenshotUrls.length}}
+            <div class="screenshot-gallery">
+                {{#each screenshotUrls}}
+                    <img class="app-screenshots" src="{{this}}" alt="screenshots" width="300px" height="400px">
+                {{/each}}
+            </div>
+        {{/if}}
+        {{#if app.details}}
+            <div class="app-detail-container">
+                <p class="app-details">{{app.details}}</p>
+            </div>
+        {{/if}}
+        {{#if user}}
+            <a class="app-apk" href="/download/apk/{{app.apk}}" download="{{app.name}}" >Get</a>
+        {{else}}
+            <a class="app-apk" href="/login">Login to Download</a>
+        {{/if}}
+    </div>
+</div>

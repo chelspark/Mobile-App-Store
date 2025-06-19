@@ -1,0 +1,27 @@
+<h1 class="title">{{title}}</h1>
+
+<div class="nav">
+    <p class="home"><a href="/">Home</a></p>
+</div>
+
+<fieldset class="register-form-container">
+        <legend class="register-form-name">New Account</legend>
+        <form class="register-form" action="/register" method="POST">
+            <div>
+                <label class="register-email" for="userEmail">Email:</label>
+                <input class="register-emailInput" type="email" name="email" required>
+            </div>
+            {{#if error}}
+                <p class="register-error-msg">{{error}}</p>
+            {{/if}}
+            <br>
+            <div>
+                <label class="register-password" for="password">Password:</label>
+                <input class="register-passwordInput" type="password" name="password" required>
+            </div>
+            <br>
+            <div class="register-nav2">
+                <input class="register-submit-button" type="submit" value="create a new account">
+            </div>
+        </form>
+    </fieldset>
